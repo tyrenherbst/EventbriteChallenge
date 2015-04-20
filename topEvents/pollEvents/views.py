@@ -58,7 +58,7 @@ def results(request, question_id):
                 #iterate over every page in the API results
                 for x in range(1,numofpages):
                     #Make API request
-                    payload = ['token','4AV7SBC4EFRAY3P3TENN','pages',x,'categories',category.cID]
+                    payload = ['token','4AV7SBC4EFRAY3P3TENN','page',x,'categories',category.cID]
                     tt="https://www.eventbriteapi.com/v3/events/search/"
 		    
                     tt = tt + "?" + payload[0] + "=" + payload[1] + "&" + payload[2] + "=" + str(payload[3]) + "&" + payload[4] + "=" + str(payload[5]) 
