@@ -20,3 +20,14 @@ Quick start
    to edit the poll (username:admin password: eventbrite) (you'll need the Admin app enabled).
 
 5. Visit http://127.0.0.1:8000/pollEvents/ to participate in the poll.
+
+Quick Notes
+-----------
+- Logic for API requests can b efound in the views.py
+	-Due to the large amount of API requests necessary, I have commented out some 
+	of the Result information (although they can be added back at any time it isjust very slow)
+
+-Logic for all voting is found in detail.html
+
+-Logic for the table is found in results.html and relies on the jQuery.simplePagination script
+ in order to perform pagination on the results table that is displayed to users

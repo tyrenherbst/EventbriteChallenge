@@ -15,12 +15,12 @@ class Question(models.Model):
     was_published_recently.short_description = 'Published recently?'
 
 class Results(models.Model):
-    category = models.CharField(max_length = 200,default='')
-    name = models.CharField(max_length = 200,default='')
-    eID = models.CharField(max_length = 200,default='')
-    city = models.CharField(max_length = 200,default='')
-    country = models.CharField(max_length = 200,default='')
-    link = models.CharField(max_length = 200,default='')
+    category = models.CharField(max_length = 200,default='',null=True)
+    name = models.CharField(max_length = 200,default='',null=True)
+    eID = models.CharField(max_length = 200,default='',null=True)
+    city = models.CharField(max_length = 200,default='',null=True)
+    country = models.CharField(max_length = 200,default='',null=True)
+    link = models.CharField(max_length = 200,default='',null=True)
 
     class Meta:
         db_table = 'Results'

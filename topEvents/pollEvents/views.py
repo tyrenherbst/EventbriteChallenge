@@ -68,7 +68,7 @@ def results(request, question_id):
                     #iterate over every  event
                     for number in range(len(json_object)):
                         #Save individual events to the Results table
-                        p=Results(category=json_object["events"][number]["category"],name=json_object["events"][number]["name"]["text"],eID=json_object["events"][number]["id"],city=json_object["events"][number]["venue"]["address"]["city"],country=json_object["events"][number]["venue"]["address"]["country"],link=json_object["events"][number]["url"])
+                        p=Results(category=json_object["events"][number]["category"],name=json_object["events"][number]["name"]["text"])#,eID=json_object["events"][number]["id"],city=json_object["events"][number]["venue"]["address"]["city"],country=json_object["events"][number]["venue"]["address"]["country"],link=json_object["events"][number]["url"])
                         p.save()
                    
     return render(request, 'pollEvents/results.html', {'question': question,'results':Results.objects.order_by('categories')})
