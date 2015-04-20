@@ -1,0 +1,43 @@
+{% load staticfiles %}
+
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script src="jquery.simplePagination.js"></script>
+
+
+<link rel="stylesheet" type="text/css" href="{% static 'pollEvents/style.css' %}" />
+
+<h1>{{ question.question_text }}</h1>
+<a href="{% url 'pollEvents:details' question.id %}">Pick again?</a>
+
+<table id="resultstable">
+	<tr id="tableheader">
+		<th>Category</th>
+		<th>Event Name</th>
+		<th>ID</th>
+		<th>City</th>
+		<th>Country</th>
+		<th>More Information<th>
+	</tr>
+	{% for result in results %}
+	<tr id="tablecontents">
+		<th>{{result.category}}</th>
+		<th>{{result.category}}</th>
+		<th>{{result.eID}}</th>
+		<th>{{result.city}}</th>
+		<th>{{result.country}}</th>
+		<th><a href="{{results.link}}">Click Here!</a></th>
+	</tr>
+	{% endfor %}
+</table>
+
+<script type="text/javascript">
+	$('#resultstable').simplePagination({
+		perPage: 25,
+		containerClass: '',
+		previousButtonClass: '',
+		nextButtonClass: '',
+		previousButtonText: 'Previous',
+		nextButtonText: 'Next',
+		currentPage: 1
+	});
+</script>

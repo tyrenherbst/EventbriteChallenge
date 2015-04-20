@@ -1,0 +1,48 @@
+{% load staticfiles %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'pollEvents/style.css' %}" />
+
+<h1>{{ question.question_text }}</h1>
+<ul>
+{% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+
+<form action="{% url 'pollEvents:vote' question.id %}" id="limit" method="post">
+{% csrf_token %}
+{% for category in question.category_set.all %}
+    <input type="checkbox" name="category" id="category{{ forloop.counter }}" value="{{ category.id }}" />
+    <label for="category{{ forloop.counter }}">{{ category.category_text }}</label><br />
+{% endfor %}
+<input id="sub" type="submit" value="Only Pick Top 3" disabled=true/>
+</form>
+<script type="text/javascript">
+	var boxes = document.forms.limit.category
+    var submit = document.forms.limit.sub
+	for (var x=0; x<boxes.length; x++){
+		boxes[x].onclick=function(){
+            var count=0
+            for (var y=0; y<boxes.length; y++){
+                if(boxes[y].checked){
+                    count=count+1
+                }
+            }
+            //if (count == 1){
+            //    alert("Please pick 2 more category")
+            //    submit.disabled = true
+            //}
+            //if (count == 2){
+            //   alert("Please pick 1 more category")
+            //    submit.disabled = true
+            //}
+            if (count == 3){
+                alert("Done! Please submit your categories")
+                submit.disabled = false
+            }
+            if (count > 3){
+                alert("Only Pick 3 categories")
+                this.checked=false
+                submit.disabled = true
+            }
+		}
+	}
+    
+</script>

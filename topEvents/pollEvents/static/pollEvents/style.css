@@ -1,0 +1,20 @@
+li a {
+    color: green;
+}
+
+body {
+    background: white url("images/background.gif") no-repeat right bottom;
+}
+
+#tableheader{
+     text-align: left;
+     border: 1px solid green;
+     background-color: green;
+     color: white;
+     font-size: 18px;
+}
+
+#tablecontents{
+     border: 1px solid green;	
+     font-size: 12px;
+}
