@@ -10,12 +10,19 @@ from .models import Question, Category, Results
 
 # Create your views here.
 def index(request):
+    # why still have a question object.  Why do you need it outside of passing p.id
+    #   which you don't even use later.
     p = Question.objects.get(pk='1')    
     return HttpResponseRedirect(reverse('pollEvents:details', args=(p.id,)))
 
 def details(request, question_id):
+    # likely I'm just not following here....
     question = get_object_or_404(Question, pk=question_id)
+
+
+    # why are you still referring to a Question.  Why not just have categories stand alone?
     q = Question.objects.get(pk='1')
+
     category_list = q.category_set.all()
     for category in category_list:
         category.votes = 0
