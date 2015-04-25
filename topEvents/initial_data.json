@@ -3,7 +3,7 @@
     "model": "pollEvents.Question",
     "pk": 1,
     "fields": {
-      "question_text":"What are your top 3 favorite event categories?"
+      "question_text":"What are your top 3 favourite event categories?"
     }
   },
   {
