@@ -1,0 +1,189 @@
+[
+  {
+    "model": "pollEvents.Question",
+    "pk": 1,
+    "fields": {
+      "question_text":"What are your top 3 favorite event categories?"
+    }
+  },
+  {
+    "model": "pollEvents.Category",
+    "pk": 1,
+    "fields": {
+      "question": 1,
+      "category_text":"Business & Professional",
+      "cID":101
+    }
+  },
+    {
+    "model": "pollEvents.Category",
+    "pk": 2,
+    "fields": {
+      "question": 1,
+      "category_text":"Science & Technology",
+      "cID":102
+    }
+  },
+    {
+    "model": "pollEvents.Category",
+    "pk": 3,
+    "fields": {
+      "question": 1,
+      "category_text":"Music",
+      "cID":103
+    }
+  },
+    {
+    "model": "pollEvents.Category",
+    "pk": 4,
+    "fields": {
+      "question": 1,
+      "category_text":"Film, Media & Entertainment",
+      "cID":104
+    }
+  },
+    {
+    "model": "pollEvents.Category",
+    "pk": 5,
+    "fields": {
+      "question": 1,
+      "category_text":"Performing & Visual Arts",
+      "cID":105
+    }
+  },
+    {
+    "model": "pollEvents.Category",
+    "pk": 6,
+    "fields": {
+      "question": 1,
+      "category_text":"Fashion & Beauty",
+      "cID":106
+    }
+  },
+    {
+    "model": "pollEvents.Category",
+    "pk": 7,
+    "fields": {
+      "question": 1,
+      "category_text":"Health & Wellness",
+      "cID":107
+    }
+  },
+    {
+    "model": "pollEvents.Category",
+    "pk": 8,
+    "fields": {
+      "question": 1,
+      "category_text":"Sports & Fitness",
+      "cID":108
+    }
+  },
+    {
+    "model": "pollEvents.Category",
+    "pk": 9,
+    "fields": {
+      "question": 1,
+      "category_text":"Travel & Outdoor",
+      "cID":109
+    }
+  },
+    {
+    "model": "pollEvents.Category",
+    "pk": 10,
+    "fields": {
+      "question": 1,
+      "category_text":"Food & Drink",
+      "cID":110
+    }
+  },
+    {
+    "model": "pollEvents.Category",
+    "pk": 11,
+    "fields": {
+      "question": 1,
+      "category_text":"Charity & Causes",
+      "cID":111
+    }
+  },
+    {
+    "model": "pollEvents.Category",
+    "pk": 12,
+    "fields": {
+      "question": 1,
+      "category_text":"Government & Politics",
+      "cID":112
+    }
+  },
+    {
+    "model": "pollEvents.Category",
+    "pk": 13,
+    "fields": {
+      "question": 1,
+      "category_text":"Community & Culture",
+      "cID":113
+    }
+  },
+    {
+    "model": "pollEvents.Category",
+    "pk": 14,
+    "fields": {
+      "question": 1,
+      "category_text":"Religion & Spirituality",
+      "cID":114
+    }
+  },
+    {
+    "model": "pollEvents.Category",
+    "pk": 15,
+    "fields": {
+      "question": 1,
+      "category_text":"Family & Education",
+      "cID":115
+    }
+  },
+    {
+    "model": "pollEvents.Category",
+    "pk": 16,
+    "fields": {
+      "question": 1,
+      "category_text":"Seasonal & Holiday",
+      "cID":116
+    }
+  },
+    {
+    "model": "pollEvents.Category",
+    "pk": 17,
+    "fields": {
+      "question": 1,
+      "category_text":"Home & Lifestyle",
+      "cID":117
+    }
+  },
+    {
+    "model": "pollEvents.Category",
+    "pk": 18,
+    "fields": {
+      "question": 1,
+      "category_text":"Auto, Boat & Air",
+      "cID":118
+    }
+  },
+    {
+    "model": "pollEvents.Category",
+    "pk": 19,
+    "fields": {
+      "question": 1,
+      "category_text":"Hobbies & Special Interest",
+      "cID":119
+    }
+  },
+    {
+    "model": "pollEvents.Category",
+    "pk": 20,
+    "fields": {
+      "question": 1,
+      "category_text":"Other",
+      "cID":199
+    }
+  }
+]

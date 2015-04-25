@@ -5,7 +5,7 @@ from django.utils import timezone
 
 class Question(models.Model):
     question_text = models.CharField(max_length = 200)
-    pub_date = models.DateTimeField('Date Published')
+    pub_date = models.DateTimeField('Date Published',default=timezone.now())
     def __str__(self):
         return self.question_text
     def was_published_recently(self):
@@ -29,7 +29,7 @@ class Results(models.Model):
 class Category(models.Model):
     question = models.ForeignKey(Question)
     category_text = models.CharField(max_length = 200)
-    pub_date = models.DateTimeField('Date Published')
+    pub_date = models.DateTimeField('Date Published',default=timezone.now())
     cID = models.IntegerField(default=0)
     votes = models.IntegerField(default=0)
     def __str__(self):

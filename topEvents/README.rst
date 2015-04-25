@@ -14,7 +14,9 @@ Quick start
 
 2. Open the command window and navigate to the repository file directory
 
-3. Run `python manage.py migrate` to create the pollEvent models.
+3a. Run `python manage.py migrate` to create the pollEvent models.
+
+3b. Run 'python manage.py loaddata initial_data.json' to populate the database with the initial question and categories
 
 4. Start the development server and visit http://127.0.0.1:8000/admin/
    to edit the poll (username:admin password: eventbrite) (you'll need the Admin app enabled).
